@@ -1,0 +1,66 @@
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0">
+  <title>Responsive Form Card</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<div class="row gy-4 gy-xl-5 p-4 p-xl-5">
+  <div class="col-12">
+    <div class="form-box">
+      <h3>Feedback</h3>
+      <form (submit)="submitdata()">
+        <label for="uname">
+          <i class="fa fa-solid fa-user"></i>
+          Name
+        </label>
+        <input type="text" id="name" class="form-control"
+          name="name" required [(ngModel)]="f.name">
+
+        <label for="emailaddress">
+          <i class="fa fa-solid fa-envelope"></i>
+          Email Address
+        </label>
+        <input type="emailaddress" id="emailaddress" class="form-control"
+          name="emailaddress" required [(ngModel)]="f.emailaddress">
+
+        <label for="phone">
+          <i class="fa-solid fa-phone"></i>
+          Phone No
+        </label>
+        <input type="tel" id="phoneno" class="form-control"
+          name="phoneno" required [(ngModel)]="f.phoneno">
+
+        <label>
+          <i class="fa-solid fa-face-smile"></i>
+          Do you satisfy with our service?
+        </label>
+        <div class="radio-group">
+          <input type="radio" id="yes"
+            name="satisfy" value="yes" checked>
+          <label for="yes">Yes</label>
+
+          <input type="radio" id="no"
+            name="satisfy" value="no">
+          <label for="no">No</label>
+        </div>
+
+        <label for="msg">
+          <i class="fa-solid fa-comments"
+            style="margin-right: 3px;"></i>
+          Suggestions:
+        </label>
+        <textarea id="msg" name="msg" class="form-control"
+          rows="2" cols="10" required [(ngModel)]="f.suggestion"> 
+      </textarea>
+        <button type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

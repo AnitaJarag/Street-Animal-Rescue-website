@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+  <div class="container-fluid" id="myNavbar" [ngSwitch]="menuType">
+    <a class="navbar-brand" href="#">
+      <h2><b>Help Them</b></h2>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="nav justify-content-end" *ngSwitchCase="'guest'">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page"
+          routerLink="/aboutus">About us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/service">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/contact">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/feedback">Feedback</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/register">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/adminlogin">Admin Login</a>
+      </li>
+    </ul>
+
+    <ul class="nav justify-content-end" *ngSwitchCase="'user'">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page"
+          routerLink="/aboutus">About us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/service">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/contact">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/Feedback">Feedback</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="slogout()">Logout</a>
+      </li>
+    </ul>
+
+    <ul class="nav justify-content-end" *ngSwitchCase="'admin'">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page"
+          routerLink="/viewregister">View Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/viewfeedback">View Feedback</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="alogout()">Logout</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
